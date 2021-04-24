@@ -1,8 +1,8 @@
 #!/bin/sh
-
-if [ ! -d "$2" ]; then
-  mkdir -p "$2"
+DIR_NAME="frames"
+if [ ! -d "$DIR_NAME" ]; then
+  mkdir -p "$DIR_NAME"
 fi
 
-ffmpeg -i "$1" -vf scale=40:-1 "$2/%06d.png"
+ffmpeg -i "$1" -vf scale=40:-1 "$DIR_NAME/%06d.png"
 
